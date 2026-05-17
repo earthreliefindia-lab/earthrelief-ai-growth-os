@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Content Brief",
+  "type": "object",
+  "required": ["platform", "hook", "content_angle", "script", "caption", "cta", "approval_status"],
+  "properties": {
+    "platform": { "type": "string", "enum": ["instagram", "facebook", "linkedin", "youtube"] },
+    "trend_source": { "type": "string" },
+    "hook": { "type": "string" },
+    "content_angle": { "type": "string" },
+    "script": { "type": "string" },
+    "voiceover": { "type": "string" },
+    "caption": { "type": "string" },
+    "hashtags": { "type": "array", "items": { "type": "string" } },
+    "cta": { "type": "string" },
+    "risk": { "type": "string", "enum": ["low", "medium", "high"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 100 },
+    "approval_status": { "type": "string", "enum": ["pending", "approved", "rejected", "modify_requested"] }
+  }
+}
