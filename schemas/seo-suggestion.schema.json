@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SEO Suggestion",
+  "type": "object",
+  "required": ["affected_page", "issue_or_opportunity", "recommended_change", "reason", "expected_impact", "risk", "confidence", "approval_status"],
+  "properties": {
+    "affected_page": { "type": "string" },
+    "keyword": { "type": "string" },
+    "issue_or_opportunity": { "type": "string" },
+    "recommended_change": { "type": "string" },
+    "reason": { "type": "string" },
+    "expected_impact": { "type": "string" },
+    "risk": { "type": "string", "enum": ["low", "medium", "high"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 100 },
+    "approval_status": { "type": "string", "enum": ["pending", "approved", "rejected", "modify_requested"] },
+    "notes": { "type": "string" }
+  }
+}
