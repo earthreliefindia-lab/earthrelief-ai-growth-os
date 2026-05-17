@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Trend Report",
+  "type": "object",
+  "required": ["trend_name", "platform", "trend_summary", "viral_psychology", "earth_relief_adaptation", "risk", "confidence", "approval_status"],
+  "properties": {
+    "trend_name": { "type": "string" },
+    "platform": { "type": "string", "enum": ["instagram", "facebook", "linkedin", "youtube", "multiple"] },
+    "trend_source": { "type": "string" },
+    "trend_summary": { "type": "string" },
+    "viral_psychology": { "type": "string" },
+    "earth_relief_adaptation": { "type": "string" },
+    "suggested_content_format": { "type": "string" },
+    "cta": { "type": "string" },
+    "risk": { "type": "string", "enum": ["low", "medium", "high"] },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 100 },
+    "approval_status": { "type": "string", "enum": ["pending", "approved", "rejected", "modify_requested"] },
+    "notes": { "type": "string" }
+  }
+}
